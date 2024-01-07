@@ -1,38 +1,15 @@
-# create-svelte
+# thumbnail-assist
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+簡単なサムネ生成アシストツールです。
+このアシストツールには以下の機能があります：
+* WIP: `カラーアナライザー`: 指定されたフォルダにあるイラストファイルを分析し、直近で一番使用されていない色を検出します。
+* WIP: `アセットマネージャー`: 指定されたフォルダに置いてあるイラストファイルを色順に表示し、特定の色のイラストを探しやすくします
 
-## Creating a project
+## ビルド方法
 
-If you're seeing this, you've probably already done this step. Congrats!
+ビルドするにはまず以下のツールをインストールしてください:
+- [`node.js`](https://nodejs.org/en)
+- [`rust`](https://www.rust-lang.org/ja/tools/install)
+- [`tauri`](https://tauri.app/v1/guides/getting-started/prerequisites)
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
-
-```bash
-npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
-
-## Building
-
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+インストール後、`cargo tauri build`を行えば`src-tauri/target/release`のフォルダにビルドされたファイルが生成されます
