@@ -1,6 +1,4 @@
 <script lang="ts">
-    import "../app.css";
-
 	import Sidebar from "./.components/sidebar.svelte";
     import Container from "./.components/container.svelte";
     import Function from "./.components/function.svelte";
